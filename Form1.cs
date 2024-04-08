@@ -25,8 +25,18 @@ namespace pryEstructura_de_datos__nuevo_
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCola pila = new frmCola();
+            frmPila2 pila = new frmPila2();
             pila.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
