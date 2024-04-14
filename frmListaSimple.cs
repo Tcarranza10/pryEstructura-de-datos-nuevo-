@@ -50,5 +50,10 @@ namespace pryEstructura_de_datos__nuevo_
                 btnEliminar
             }
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

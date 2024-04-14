@@ -36,7 +36,14 @@ namespace pryEstructura_de_datos__nuevo_
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            frmListaSimple simple = new frmListaSimple();
+            simple.ShowDialog();
+        }
 
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble Doble = new frmListaDoble();
+            Doble.ShowDialog();
         }
     }
 }
