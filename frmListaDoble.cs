@@ -16,5 +16,10 @@ namespace pryEstructura_de_datos__nuevo_
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace pryEstructura_de_datos__nuevo_
         private String nom;
         private String tram;
         private clsNodo sig;
+        private clsNodo ant;
 
         public Int32 Codigo
         {
@@ -33,6 +34,12 @@ namespace pryEstructura_de_datos__nuevo_
         {
             get { return sig; }
             set { sig = value; }
+        }
+
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
     }
 }
