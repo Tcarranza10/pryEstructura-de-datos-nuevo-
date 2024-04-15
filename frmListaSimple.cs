@@ -40,14 +40,29 @@ namespace pryEstructura_de_datos__nuevo_
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            clsNodo obj = new clsNodo();
+            obj.Codigo = Convert.ToInt32(txtCodigo.Text);
+            obj.Nombre = txtNombre.Text;
+            obj.Tramite = txtTramite.Text;
+            Lista.Agregar(obj);
+            Lista.Recorrer(dgvLista);
+            Lista.Recorrer(lstLista);
+            Lista.Recorrer(cmbLista);
+            Lista.Recorrer();
+            txtTramite.Text = "";
+            txtNombre.Text = "";
+            txtCodigo.Text = "";
         }
 
         private void cmbLista_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbLista.Text == "")
             {
-                btnEliminar
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                btnEliminar.Enabled = true;
             }
         }
 

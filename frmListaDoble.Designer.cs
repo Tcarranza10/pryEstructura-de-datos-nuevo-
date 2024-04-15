@@ -48,8 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbtDescendente = new System.Windows.Forms.RadioButton();
+            this.rbtAscendente = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
@@ -149,6 +149,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label6
             // 
@@ -235,8 +236,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.radioButton2);
-            this.groupBox4.Controls.Add(this.radioButton1);
+            this.groupBox4.Controls.Add(this.rbtDescendente);
+            this.groupBox4.Controls.Add(this.rbtAscendente);
             this.groupBox4.Location = new System.Drawing.Point(471, 145);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(202, 65);
@@ -244,27 +245,28 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listar datos";
             // 
-            // radioButton1
+            // rbtDescendente
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ascendente";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtDescendente.AutoSize = true;
+            this.rbtDescendente.Location = new System.Drawing.Point(6, 42);
+            this.rbtDescendente.Name = "rbtDescendente";
+            this.rbtDescendente.Size = new System.Drawing.Size(89, 17);
+            this.rbtDescendente.TabIndex = 1;
+            this.rbtDescendente.TabStop = true;
+            this.rbtDescendente.Text = "Descendente";
+            this.rbtDescendente.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtAscendente
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Descendente";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtAscendente.AutoSize = true;
+            this.rbtAscendente.Checked = true;
+            this.rbtAscendente.Location = new System.Drawing.Point(6, 19);
+            this.rbtAscendente.Name = "rbtAscendente";
+            this.rbtAscendente.Size = new System.Drawing.Size(82, 17);
+            this.rbtAscendente.TabIndex = 0;
+            this.rbtAscendente.TabStop = true;
+            this.rbtAscendente.Text = "Ascendente";
+            this.rbtAscendente.UseVisualStyleBackColor = true;
             // 
             // frmListaDoble
             // 
@@ -313,7 +315,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtDescendente;
+        private System.Windows.Forms.RadioButton rbtAscendente;
     }
 }
