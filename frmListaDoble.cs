@@ -89,5 +89,10 @@ namespace pryEstructura_de_datos__nuevo_
                 
             }
         }
+
+        private void frmListaDoble_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace pryEstructura_de_datos__nuevo_
 {
-    partial class frmListaDoble
+    partial class frmArbolBinario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.dgvListaDoble = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,46 +45,29 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.rbtDescendente = new System.Windows.Forms.RadioButton();
-            this.rbtAscendente = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = global::pryEstructura_de_datos__nuevo_.Properties.Resources.pila2;
-            this.pictureBox1.Image = global::pryEstructura_de_datos__nuevo_.Properties.Resources._0_F7Qnr7Zs_dobles_s_;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 199);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lstListaDoble);
+            this.groupBox3.Controls.Add(this.radioButton3);
+            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.radioButton1);
             this.groupBox3.Controls.Add(this.dgvListaDoble);
-            this.groupBox3.Location = new System.Drawing.Point(10, 231);
+            this.groupBox3.Location = new System.Drawing.Point(8, 231);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(666, 207);
-            this.groupBox3.TabIndex = 19;
+            this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Listado en una Lista y una Grilla";
-            // 
-            // lstListaDoble
-            // 
-            this.lstListaDoble.FormattingEnabled = true;
-            this.lstListaDoble.Location = new System.Drawing.Point(6, 19);
-            this.lstListaDoble.Name = "lstListaDoble";
-            this.lstListaDoble.Size = new System.Drawing.Size(198, 173);
-            this.lstListaDoble.TabIndex = 5;
+            this.groupBox3.Text = "Listado del árbol";
             // 
             // dgvListaDoble
             // 
@@ -125,10 +106,10 @@
             this.groupBox2.Controls.Add(this.cmbLista);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(467, 12);
+            this.groupBox2.Location = new System.Drawing.Point(465, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(207, 119);
-            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eliminar Elemento";
             // 
@@ -149,7 +130,6 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label6
             // 
@@ -169,10 +149,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(231, 12);
+            this.groupBox1.Location = new System.Drawing.Point(229, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 199);
-            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Elemento";
             // 
@@ -205,7 +185,6 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label3
             // 
@@ -234,71 +213,81 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo:";
             // 
-            // groupBox4
+            // button1
             // 
-            this.groupBox4.Controls.Add(this.rbtDescendente);
-            this.groupBox4.Controls.Add(this.rbtAscendente);
-            this.groupBox4.Location = new System.Drawing.Point(471, 145);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(202, 65);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Listar datos";
+            this.button1.Location = new System.Drawing.Point(484, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 31);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Equilibrar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // rbtDescendente
+            // listBox1
             // 
-            this.rbtDescendente.AutoSize = true;
-            this.rbtDescendente.Location = new System.Drawing.Point(6, 42);
-            this.rbtDescendente.Name = "rbtDescendente";
-            this.rbtDescendente.Size = new System.Drawing.Size(89, 17);
-            this.rbtDescendente.TabIndex = 1;
-            this.rbtDescendente.TabStop = true;
-            this.rbtDescendente.Text = "Descendente";
-            this.rbtDescendente.UseVisualStyleBackColor = true;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(12, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(195, 199);
+            this.listBox1.TabIndex = 25;
             // 
-            // rbtAscendente
+            // radioButton1
             // 
-            this.rbtAscendente.AutoSize = true;
-            this.rbtAscendente.Checked = true;
-            this.rbtAscendente.Location = new System.Drawing.Point(6, 19);
-            this.rbtAscendente.Name = "rbtAscendente";
-            this.rbtAscendente.Size = new System.Drawing.Size(82, 17);
-            this.rbtAscendente.TabIndex = 0;
-            this.rbtAscendente.TabStop = true;
-            this.rbtAscendente.Text = "Ascendente";
-            this.rbtAscendente.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(24, 41);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(66, 17);
+            this.radioButton1.TabIndex = 26;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "In-Orden";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // frmListaDoble
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(24, 87);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(73, 17);
+            this.radioButton2.TabIndex = 27;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Pre-Orden";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(24, 128);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(78, 17);
+            this.radioButton3.TabIndex = 28;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Post-Orden";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 450);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(687, 450);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmListaDoble";
-            this.Text = "frmListaDoble";
-            this.Load += new System.EventHandler(this.frmListaDoble_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Name = "frmArbolBinario";
+            this.Text = "frmArbolBinario";
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox lstListaDoble;
         private System.Windows.Forms.DataGridView dgvListaDoble;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
@@ -315,8 +304,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton rbtDescendente;
-        private System.Windows.Forms.RadioButton rbtAscendente;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

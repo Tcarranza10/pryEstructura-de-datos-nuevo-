@@ -41,5 +41,17 @@ namespace pryEstructura_de_datos__nuevo_
             get { return ant; }
             set { ant = value; }
         }
+
+        public clsNodo Izquierda
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+
+        public clsNodo Derecho
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
     }
 }
