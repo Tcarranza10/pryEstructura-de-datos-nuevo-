@@ -279,6 +279,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmListaDoble";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaDoble";
             this.Load += new System.EventHandler(this.frmListaDoble_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

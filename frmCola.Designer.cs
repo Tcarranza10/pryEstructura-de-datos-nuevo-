@@ -281,6 +281,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCola";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCola";
             this.Load += new System.EventHandler(this.frmCola_Load);
             this.groupBox3.ResumeLayout(false);
