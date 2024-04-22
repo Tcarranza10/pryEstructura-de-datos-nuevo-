@@ -72,7 +72,7 @@ namespace pryEstructura_de_datos__nuevo_
             }
         }
 
-        private void Recorrer(DataGridView Grilla)
+        public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
