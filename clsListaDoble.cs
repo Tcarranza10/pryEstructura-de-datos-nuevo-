@@ -174,7 +174,7 @@ namespace pryEstructura_de_datos__nuevo_
             while (aux != null)
             {
                 Lista.Items.Add(aux.Codigo);
-                aux = aux.Siguiente;
+                aux = aux.Anterior;
             }
         }
 
@@ -186,7 +186,7 @@ namespace pryEstructura_de_datos__nuevo_
             while (aux != null)
             {
                 Combo.Items.Add(aux.Nombre);
-                aux = aux.Siguiente;
+                aux = aux.Anterior;
             }
         }
 
@@ -204,7 +204,7 @@ namespace pryEstructura_de_datos__nuevo_
                 AD.Write(aux.Nombre);
                 AD.Write(";");
                 AD.WriteLine(aux.Tramite);
-                aux = aux.Siguiente;
+                aux = aux.Anterior;
             }
             AD.Close();
         }

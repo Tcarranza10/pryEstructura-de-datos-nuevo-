@@ -34,7 +34,8 @@ namespace pryEstructura_de_datos__nuevo_
                 txtNombre.Text = "";
                 txtCodigo.Text = "";
             }
-            else
+
+            if (rbtDescendente.Checked)
             {
                 clsNodo obj = new clsNodo();
                 obj.Codigo = Convert.ToInt32(txtCodigo.Text);
