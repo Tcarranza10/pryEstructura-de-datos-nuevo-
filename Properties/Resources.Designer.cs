@@ -73,6 +73,16 @@ namespace pryEstructura_de_datos__nuevo_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3d8f9f89_1775_4d12_81d8_98980c416b37 {
+            get {
+                object obj = ResourceManager.GetObject("3d8f9f89-1775-4d12-81d8-98980c416b37", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cola {
             get {
                 object obj = ResourceManager.GetObject("cola", resourceCulture);
@@ -96,6 +106,16 @@ namespace pryEstructura_de_datos__nuevo_.Properties {
         internal static System.Drawing.Bitmap pila2 {
             get {
                 object obj = ResourceManager.GetObject("pila2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallpaperflare_com_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("wallpaperflare.com_wallpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

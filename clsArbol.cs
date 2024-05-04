@@ -53,61 +53,216 @@ namespace pryEstructura_de_datos__nuevo_
             }
         }
 
-        public void Recorrer(ComboBox Lista)
+        public void RecorrerAsCombo(ComboBox Lista)
         {
             Lista.Items.Clear();
-            InOrdenAsc(Lista, Raiz);
+            InOrdenAsCombo(Lista, Raiz);
         }
 
-        private void InOrdenAsc(ComboBox Lst, clsNodo R)
+        private void InOrdenAsCombo(ComboBox Lst, clsNodo R)
         {
             if(R.Izquierda != null)
             {
-                InOrdenAsc(Lst, R.Izquierda);
+                InOrdenAsCombo(Lst, R.Izquierda);
             }
             Lst.Items.Add(R.Codigo);
             if(R.Derecho != null)
             {
-                InOrdenAsc(Lst, R.Derecho);
+                InOrdenAsCombo(Lst, R.Derecho);
             }
         }
 
-        public void Recorrer(DataGridView Grilla)
+        public void RecorrerAsGrilla(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
-            InOrdenAsc(Grilla, Raiz);
+            InOrdenAsGrilla(Grilla, Raiz);
         }
 
-        private void InOrdenAsc(DataGridView Dgv, clsNodo R)
+        private void InOrdenAsGrilla(DataGridView Dgv, clsNodo R)
         {
-            if(R.Izquierda != null) InOrdenAsc(Dgv, R.Izquierda);
+            if(R.Izquierda != null) InOrdenAsGrilla(Dgv, R.Izquierda);
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
-            if (R.Derecho != null) InOrdenAsc(Dgv, R.Derecho);
+            if (R.Derecho != null) InOrdenAsGrilla(Dgv, R.Derecho);
 
         }
+        public void RecorrerInOrdenAscAD()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioInOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            RecorrerInOrdenAscAD(Raiz, AD);
+            AD.Close();
+        }
 
-        public void Recorrer(TreeView tree)
+        private void RecorrerInOrdenAscAD(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                RecorrerInOrdenAscAD(R.Izquierda, writer);
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+                RecorrerInOrdenAscAD(R.Derecho, writer);
+            }
+        }
+
+
+
+        public void RecorrerDesGrilla(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            InOrderDesGrilla(Grilla, Raiz);
+        }
+        public void InOrderDesGrilla(DataGridView dgv, clsNodo R)
+        {
+            if (R.Derecho != null)
+            {
+                InOrderDesGrilla(dgv, R.Derecho);
+            }
+
+            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierda != null)
+            {
+                InOrderDesGrilla(dgv, R.Izquierda);
+            }
+        }
+        public void RecorrerComboDesc(ComboBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrderDesCombo(Lista, Raiz);
+        }
+        public void InOrderDesCombo(ComboBox Lst, clsNodo R)
+        {
+            if (R.Derecho != null)
+            {
+                InOrderDesCombo(Lst, R.Derecho);
+            }
+
+            Lst.Items.Add(R.Codigo);
+            if (R.Izquierda != null)
+            {
+                InOrderDesCombo(Lst, R.Izquierda);
+            }
+        }
+        public void RecorrerInOrdenDescAD()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioInOrdenDesc.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            InOrdenDescAD(Raiz, AD);
+            AD.Close();
+        }
+
+        private void InOrdenDescAD(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                InOrdenDescAD(R.Derecho, writer);
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+                InOrdenDescAD(R.Izquierda, writer);
+            }
+        }
+
+
+
+        public void RecorrerTree(TreeView tree)
         {
             tree.Nodes.Clear();
             TreeNode NodoPadre = new TreeNode("Arbol");
             tree.Nodes.Add(NodoPadre);
-            PreOrden(Raiz, NodoPadre);
+            PreOrdenTree(Raiz, NodoPadre);
             tree.ExpandAll();
         }
 
-        private void PreOrden(clsNodo R, TreeNode nodoTreeView)
+        private void PreOrdenTree(clsNodo R, TreeNode nodoTreeView)
         {
             TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
             nodoTreeView.Nodes.Add(NodoPadre);
             if(R.Izquierda != null)
             {
-                PreOrden(R.Izquierda, NodoPadre);
+                PreOrdenTree(R.Izquierda, NodoPadre);
             }
             if(R.Derecho != null)
             {
-                PreOrden(R.Derecho, NodoPadre);
+                PreOrdenTree(R.Derecho, NodoPadre);
             }
         }
+
+        public void RecorrerPreOrdenGrilla(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrdenGrilla(Grilla, Raiz);
+        }
+        public void PreOrdenGrilla(DataGridView dgv, clsNodo R)
+        {
+            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierda != null)
+            {
+                PreOrdenGrilla(dgv, R.Izquierda);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrdenGrilla(dgv, R.Derecho);
+            }
+        }
+        public void RecorrerPreOrdenAD()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioPreOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            PreOrdenAD(Raiz, AD);
+            AD.Close();
+        }
+
+        private void PreOrdenAD(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+                PreOrdenAD(R.Izquierda, writer);
+                PreOrdenAD(R.Derecho, writer);
+            }
+        }
+
+
+
+        public void RecorrerPostOrdenGrilla(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrdenGrilla(Grilla, Raiz);
+        }
+        public void PostOrdenGrilla(DataGridView dgv, clsNodo R)
+        {
+
+            if (R.Izquierda != null)
+            {
+                PreOrdenGrilla(dgv, R.Izquierda);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrdenGrilla(dgv, R.Derecho);
+            }
+            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+        }
+
+        public void RecorrerPostOrdenAD()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioPostOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            PostOrdenAD(Raiz, AD);
+            AD.Close();
+        }
+
+        private void PostOrdenAD(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                PostOrdenAD(R.Izquierda, writer);
+                PostOrdenAD(R.Derecho, writer);
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+            }
+        }
+
+
 
         public clsNodo BuscarCodigo(Int32 cod)
         {

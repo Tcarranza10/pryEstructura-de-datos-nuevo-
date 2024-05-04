@@ -25,12 +25,72 @@ namespace pryEstructura_de_datos__nuevo_
             obj.Nombre = txtNombre.Text;
             obj.Tramite = txtTramite.Text;
             Arbol.Agregar(obj);
-            Arbol.Recorrer(dgvArbol);
-            Arbol.Recorrer(treeView1);
-            Arbol.Recorrer(cmbArbol);
+            Arbol.RecorrerAsGrilla(dgvArbol);
+            Arbol.RecorrerTree(treeView1);
+            Arbol.RecorrerAsCombo(cmbArbol);
             txtTramite.Text = "";
             txtNombre.Text = "";
             txtCodigo.Text = "";
+        }
+       
+       
+        private void rbtInOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerAsGrilla(dgvArbol);
+            Arbol.RecorrerAsCombo(cmbArbol);
+            Arbol.RecorrerInOrdenAscAD();
+        }
+
+        private void rbtPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerPreOrdenGrilla(dgvArbol);
+            Arbol.RecorrerTree(treeView1);
+            Arbol.RecorrerPreOrdenAD();
+        }
+
+        private void rbtPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerPostOrdenGrilla(dgvArbol);
+            Arbol.RecorrerPostOrdenAD();
+
+        }
+
+        private void rbtInOrdenDes_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerDesGrilla(dgvArbol);
+            Arbol.RecorrerComboDesc(cmbArbol);
+            Arbol.RecorrerInOrdenDescAD();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cmbArbol.SelectedIndex != -1)
+            {
+                Int32 x = Convert.ToInt32(cmbArbol.Text);
+                Arbol.Eliminar(x);
+                Arbol.RecorrerAsGrilla(dgvArbol);
+                Arbol.RecorrerTree(treeView1);
+                Arbol.RecorrerAsCombo(cmbArbol);
+                Arbol.RecorrerInOrdenAscAD();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un dato");
+            }
+        }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            Arbol.Equilibrar();
+            Arbol.RecorrerAsGrilla(dgvArbol);
+            Arbol.RecorrerTree(treeView1);
+            Arbol.RecorrerAsCombo(cmbArbol);
+            Arbol.RecorrerInOrdenAscAD();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

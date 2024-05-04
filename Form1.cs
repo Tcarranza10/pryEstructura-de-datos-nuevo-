@@ -51,5 +51,10 @@ namespace pryEstructura_de_datos__nuevo_
             frmArbolBinario Arbol = new frmArbolBinario();
             Arbol.ShowDialog();
         }
+
+        private void datosDelDesarroladorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

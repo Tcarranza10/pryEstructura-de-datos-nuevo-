@@ -143,5 +143,8 @@
   <ItemGroup>
     <None Include="foto\0-F7Qnr7Zs-dobles-s-.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="foto\wallpaperflare.com_wallpaper.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
