@@ -61,14 +61,17 @@ namespace pryEstructura_de_datos__nuevo_
 
         private void InOrdenAsCombo(ComboBox Lst, clsNodo R)
         {
-            if(R.Izquierda != null)
+            if (R != null)
             {
-                InOrdenAsCombo(Lst, R.Izquierda);
-            }
-            Lst.Items.Add(R.Codigo);
-            if(R.Derecho != null)
-            {
-                InOrdenAsCombo(Lst, R.Derecho);
+                if (R.Izquierda != null)
+                {
+                    InOrdenAsCombo(Lst, R.Izquierda);
+                }
+                Lst.Items.Add(R.Codigo);
+                if (R.Derecho != null)
+                {
+                    InOrdenAsCombo(Lst, R.Derecho);
+                }
             }
         }
 
@@ -80,16 +83,18 @@ namespace pryEstructura_de_datos__nuevo_
 
         public void InOrdenAsGrilla(DataGridView Dgv, clsNodo R)
         {
-            if (R.Izquierda != null)
+            if (R != null)
             {
-                InOrdenAsGrilla(Dgv, R.Izquierda);
+                if (R.Izquierda != null)
+                {
+                    InOrdenAsGrilla(Dgv, R.Izquierda);
+                }
+                Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+                if (R.Derecho != null)
+                {
+                    InOrdenAsGrilla(Dgv, R.Derecho);
+                }
             }
-            Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
-            if (R.Derecho != null)
-            {
-                InOrdenAsGrilla(Dgv, R.Derecho);
-            }
-
         }
         public void RecorrerInOrdenAscAD()
         {
@@ -180,15 +185,18 @@ namespace pryEstructura_de_datos__nuevo_
 
         private void PreOrdenTree(clsNodo R, TreeNode nodoTreeView)
         {
-            TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
-            nodoTreeView.Nodes.Add(NodoPadre);
-            if(R.Izquierda != null)
+            if (R != null)
             {
-                PreOrdenTree(R.Izquierda, NodoPadre);
-            }
-            if(R.Derecho != null)
-            {
-                PreOrdenTree(R.Derecho, NodoPadre);
+                TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+                nodoTreeView.Nodes.Add(NodoPadre);
+                if (R.Izquierda != null)
+                {
+                    PreOrdenTree(R.Izquierda, NodoPadre);
+                }
+                if (R.Derecho != null)
+                {
+                    PreOrdenTree(R.Derecho, NodoPadre);
+                }
             }
         }
 
