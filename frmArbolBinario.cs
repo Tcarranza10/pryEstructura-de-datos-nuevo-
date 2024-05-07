@@ -92,5 +92,17 @@ namespace pryEstructura_de_datos__nuevo_
         {
 
         }
+
+        private void cmbArbol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbArbol.SelectedIndex == cmbArbol.Items.Count - 1)
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                btnEliminar.Enabled = true;
+            }
+        }
     }
 }

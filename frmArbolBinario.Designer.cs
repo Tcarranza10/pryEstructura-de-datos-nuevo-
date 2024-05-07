@@ -34,6 +34,9 @@
             this.rbtPreOrden = new System.Windows.Forms.RadioButton();
             this.rbtInOrden = new System.Windows.Forms.RadioButton();
             this.dgvArbol = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbArbol = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -48,9 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -133,6 +133,25 @@
             this.dgvArbol.Size = new System.Drawing.Size(436, 170);
             this.dgvArbol.TabIndex = 1;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 160;
+            // 
+            // Tramite
+            // 
+            this.Tramite.HeaderText = "Tramite";
+            this.Tramite.Name = "Tramite";
+            this.Tramite.ReadOnly = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cmbArbol);
@@ -153,6 +172,7 @@
             this.cmbArbol.Name = "cmbArbol";
             this.cmbArbol.Size = new System.Drawing.Size(89, 21);
             this.cmbArbol.TabIndex = 8;
+            this.cmbArbol.SelectedIndexChanged += new System.EventHandler(this.cmbArbol_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -263,25 +283,6 @@
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(196, 199);
             this.treeView1.TabIndex = 25;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 160;
-            // 
-            // Tramite
-            // 
-            this.Tramite.HeaderText = "Tramite";
-            this.Tramite.Name = "Tramite";
-            this.Tramite.ReadOnly = true;
             // 
             // frmArbolBinario
             // 

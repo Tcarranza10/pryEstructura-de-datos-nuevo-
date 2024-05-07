@@ -78,11 +78,17 @@ namespace pryEstructura_de_datos__nuevo_
             InOrdenAsGrilla(Grilla, Raiz);
         }
 
-        private void InOrdenAsGrilla(DataGridView Dgv, clsNodo R)
+        public void InOrdenAsGrilla(DataGridView Dgv, clsNodo R)
         {
-            if(R.Izquierda != null) InOrdenAsGrilla(Dgv, R.Izquierda);
+            if (R.Izquierda != null)
+            {
+                InOrdenAsGrilla(Dgv, R.Izquierda);
+            }
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
-            if (R.Derecho != null) InOrdenAsGrilla(Dgv, R.Derecho);
+            if (R.Derecho != null)
+            {
+                InOrdenAsGrilla(Dgv, R.Derecho);
+            }
 
         }
         public void RecorrerInOrdenAscAD()

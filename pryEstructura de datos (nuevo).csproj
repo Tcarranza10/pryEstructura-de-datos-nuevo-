@@ -70,6 +70,12 @@
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDatos del desarrolador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatos del desarrolador.Designer.cs">
+      <DependentUpon>frmDatos del desarrolador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaDoble.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatos del desarrolador.resx">
+      <DependentUpon>frmDatos del desarrolador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>
