@@ -30,6 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datosDelDesarroladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructurasLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,6 @@
             this.operacionConTablasDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasEnLaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repasoDeOperacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.datosDelDesarroladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,13 @@
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
+            // 
+            // datosDelDesarroladorToolStripMenuItem
+            // 
+            this.datosDelDesarroladorToolStripMenuItem.Name = "datosDelDesarroladorToolStripMenuItem";
+            this.datosDelDesarroladorToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.datosDelDesarroladorToolStripMenuItem.Text = "Datos del desarrolador";
+            this.datosDelDesarroladorToolStripMenuItem.Click += new System.EventHandler(this.datosDelDesarroladorToolStripMenuItem_Click);
             // 
             // estructurasLinealesToolStripMenuItem
             // 
@@ -135,25 +142,21 @@
             this.operacionConTablasDeBaseDeDatosToolStripMenuItem.Name = "operacionConTablasDeBaseDeDatosToolStripMenuItem";
             this.operacionConTablasDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.operacionConTablasDeBaseDeDatosToolStripMenuItem.Text = "Operacion con tablas de base de datos";
+            this.operacionConTablasDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.operacionConTablasDeBaseDeDatosToolStripMenuItem_Click);
             // 
             // consultasEnLaBaseDeDatosToolStripMenuItem
             // 
             this.consultasEnLaBaseDeDatosToolStripMenuItem.Name = "consultasEnLaBaseDeDatosToolStripMenuItem";
             this.consultasEnLaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.consultasEnLaBaseDeDatosToolStripMenuItem.Text = "Consultas en la base de datos";
+            this.consultasEnLaBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.consultasEnLaBaseDeDatosToolStripMenuItem_Click);
             // 
             // repasoDeOperacionesToolStripMenuItem
             // 
             this.repasoDeOperacionesToolStripMenuItem.Name = "repasoDeOperacionesToolStripMenuItem";
             this.repasoDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.repasoDeOperacionesToolStripMenuItem.Text = "Repaso de operaciones";
-            // 
-            // datosDelDesarroladorToolStripMenuItem
-            // 
-            this.datosDelDesarroladorToolStripMenuItem.Name = "datosDelDesarroladorToolStripMenuItem";
-            this.datosDelDesarroladorToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.datosDelDesarroladorToolStripMenuItem.Text = "Datos del desarrolador";
-            this.datosDelDesarroladorToolStripMenuItem.Click += new System.EventHandler(this.datosDelDesarroladorToolStripMenuItem_Click);
+            this.repasoDeOperacionesToolStripMenuItem.Click += new System.EventHandler(this.repasoDeOperacionesToolStripMenuItem_Click);
             // 
             // Form1
             // 

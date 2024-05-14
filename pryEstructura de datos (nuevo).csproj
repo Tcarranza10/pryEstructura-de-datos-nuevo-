@@ -64,6 +64,24 @@
     <Compile Include="frmArbolBinario.Designer.cs">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBaseDatosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDatosConsulta.Designer.cs">
+      <DependentUpon>frmBaseDatosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDatosRepaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDatosRepaso.Designer.cs">
+      <DependentUpon>frmBaseDatosRepaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDeDatosOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDeDatosOperaciones.Designer.cs">
+      <DependentUpon>frmBaseDeDatosOperaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCola.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +119,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmArbolBinario.resx">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDatosConsulta.resx">
+      <DependentUpon>frmBaseDatosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDatosRepaso.resx">
+      <DependentUpon>frmBaseDatosRepaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDeDatosOperaciones.resx">
+      <DependentUpon>frmBaseDeDatosOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
