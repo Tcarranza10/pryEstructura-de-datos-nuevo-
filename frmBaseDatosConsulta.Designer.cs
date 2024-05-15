@@ -61,12 +61,16 @@
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvConsulta
             // 
+            this.dgvConsulta.AllowUserToAddRows = false;
+            this.dgvConsulta.AllowUserToDeleteRows = false;
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsulta.Location = new System.Drawing.Point(17, 203);
             this.dgvConsulta.Name = "dgvConsulta";
+            this.dgvConsulta.ReadOnly = true;
             this.dgvConsulta.Size = new System.Drawing.Size(771, 235);
             this.dgvConsulta.TabIndex = 3;
             // 

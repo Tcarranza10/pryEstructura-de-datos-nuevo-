@@ -73,9 +73,12 @@
             // 
             // dgvRepaso
             // 
+            this.dgvRepaso.AllowUserToAddRows = false;
+            this.dgvRepaso.AllowUserToDeleteRows = false;
             this.dgvRepaso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRepaso.Location = new System.Drawing.Point(12, 164);
             this.dgvRepaso.Name = "dgvRepaso";
+            this.dgvRepaso.ReadOnly = true;
             this.dgvRepaso.Size = new System.Drawing.Size(776, 274);
             this.dgvRepaso.TabIndex = 4;
             // 
