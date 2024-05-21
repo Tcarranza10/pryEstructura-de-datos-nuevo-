@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lblRepaso = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbConsulta = new System.Windows.Forms.ComboBox();
             this.btnListar = new System.Windows.Forms.Button();
             this.dgvRepaso = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).BeginInit();
@@ -54,13 +54,13 @@
             this.lblRepaso.Size = new System.Drawing.Size(776, 100);
             this.lblRepaso.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbConsulta
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(218, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(489, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cmbConsulta.FormattingEnabled = true;
+            this.cmbConsulta.Location = new System.Drawing.Point(218, 9);
+            this.cmbConsulta.Name = "cmbConsulta";
+            this.cmbConsulta.Size = new System.Drawing.Size(489, 21);
+            this.cmbConsulta.TabIndex = 2;
             // 
             // btnListar
             // 
@@ -70,6 +70,7 @@
             this.btnListar.TabIndex = 3;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvRepaso
             // 
@@ -89,7 +90,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvRepaso);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbConsulta);
             this.Controls.Add(this.lblRepaso);
             this.Controls.Add(this.label1);
             this.Name = "frmBaseDatosRepaso";
@@ -104,7 +105,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRepaso;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbConsulta;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.DataGridView dgvRepaso;
     }

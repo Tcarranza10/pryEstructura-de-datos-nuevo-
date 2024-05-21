@@ -16,5 +16,21 @@ namespace pryEstructura_de_datos__nuevo_
         {
             InitializeComponent();
         }
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDeDatos objBD = new clsBaseDeDatos();
+            string sql = "SELECT * FROM LIBRO";
+            switch (cmbConsulta.SelectedIndex)
+            {
+                case 0:
+                    lblRepaso.Text = cmbConsulta.Text + ":" +
+                        "Paises que no tienen libros";
+                    sql = "select * fron pais where" +
+                        "idpais not in" +
+                        "(select idpais from libro";
+               break;
+
+            }
+        }
     }
 }
