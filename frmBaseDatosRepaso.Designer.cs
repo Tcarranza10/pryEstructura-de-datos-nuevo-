@@ -57,6 +57,25 @@
             // cmbConsulta
             // 
             this.cmbConsulta.FormattingEnabled = true;
+            this.cmbConsulta.Items.AddRange(new object[] {
+            "Diferencia",
+            "Interseccion",
+            "Seleccion Multiatributo",
+            "Seleccion Simple",
+            "Orden",
+            "Seleccion Simple",
+            "Seleccion Simple",
+            "Seleccion Simple",
+            "Seleccion Simple",
+            "Orden",
+            "Agrupacion",
+            "Proyeccion por Atributo",
+            "Proyeccion Multiatributo",
+            "Seleccion Simple",
+            "Orden",
+            "Seleccion Simple",
+            "Seleccion Simple",
+            "Seleccion Multiatributo"});
             this.cmbConsulta.Location = new System.Drawing.Point(218, 9);
             this.cmbConsulta.Name = "cmbConsulta";
             this.cmbConsulta.Size = new System.Drawing.Size(489, 21);
@@ -94,7 +113,9 @@
             this.Controls.Add(this.lblRepaso);
             this.Controls.Add(this.label1);
             this.Name = "frmBaseDatosRepaso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBaseDatosRepaso";
+            this.Load += new System.EventHandler(this.frmBaseDatosRepaso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
